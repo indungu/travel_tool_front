@@ -5,11 +5,9 @@ import './index.scss';
 import App from './views/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-
+const app = <App />;
 ReactDOM.render(
-  <App />, 
+  app,
 document.getElementById('root'));
 
 registerServiceWorker();

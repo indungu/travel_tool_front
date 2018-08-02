@@ -1,0 +1,72 @@
+.LeftSideNavItem {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  height: 48px;
+  align-items: center;
+  border-left: 3px solid transparent;
+  padding-left: 47px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #999999;
+
+  &__Nav-text {
+    position: absolute;
+    left: 85px;
+  }
+
+  &__leftIcon {
+    position: absolute;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 24px;
+  }
+
+  .dropdownIcon {
+    transition: transform .3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    width: 18px;
+
+    &--inactive {
+      transform: rotate(180deg);
+    }
+  }
+
+
+  &__dropdownContent {
+    display: flex;
+    flex-flow: column;
+    justify-content:flex-start;
+    transition: all .5s ease-out;
+    padding-left: 88px;
+    padding-top: 0px;
+    overflow-y: hidden;
+  }
+
+  &__dropdownContent.active {
+    height: 116.5px;
+    padding-top: 25px;
+  }
+
+  &__dropdownContent.inactive {
+    height: 0px;
+    overflow-y: hidden;
+  }
+}
+
+.LeftSideNavItem:not([class~="active"]):hover {
+  color: #4F4F4F;
+}
+
+.LeftSideNavItem.active {
+  color: #3359DB;
+  border-color: #3359DB;
+  background-color: #EEF0F6;
+  border-right: 1px solid #E4E4E4;
+}

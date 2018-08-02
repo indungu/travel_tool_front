@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownItem /> renders correctly 1`] = `
+<NavLink
+  activeClassName="active"
+  aria-current="page"
+  className="DropdownItem"
+  to="/test-link/test-endpoint"
+>
+  Test Link
+</NavLink>
+`;
+
+exports[`<LeftSideBar /> <LeftSideNavItems /> renders correctly 1`] = `
+<React.Fragment>
+  <withRouter(LeftSideNavItem)
+    isDropdown={true}
+    linkIcons={
+      Object {
+        "active": "test.svg",
+        "inactive": "test.svg",
+      }
+    }
+    link_to="/requests"
+    text="Requests"
+  >
+    <DropdownItem
+      link_to="/requests/my-requests"
+    >
+      My Requests
+    </DropdownItem>
+    <DropdownItem
+      link_to="/requests/my-approvals"
+    >
+      My Approvals
+    </DropdownItem>
+  </withRouter(LeftSideNavItem)>
+  <withRouter(LeftSideNavItem)
+    linkIcons={
+      Object {
+        "active": "test.svg",
+        "inactive": "test.svg",
+      }
+    }
+    link_to="/settings"
+    text="Settings"
+  />
+</React.Fragment>
+`;
+
+exports[`<LeftSideBar /> renders correctly 1`] = `
+<div
+  className="LeftSideBar mdl-cell mdl-cell--2-col"
+>
+  <div
+    className="LeftSideBar__fixed_wrapper"
+  >
+    <div
+      style={
+        Object {
+          "height": "100%",
+          "overflowY": "scroll",
+        }
+      }
+    >
+      <LeftSideNavItems
+        activeNavItem={Object {}}
+        navIconSources={
+          Object {
+            "requestsIcon": Object {
+              "active": "bookmark_active.svg",
+              "inactive": "bookmark_inactive.svg",
+            },
+            "settingsIcon": Object {
+              "active": "settings_active.svg",
+              "inactive": "settings_inactive.svg",
+            },
+          }
+        }
+        setActiveNavItem={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<LeftSideNavItem /> <LeftSideNavItem /> with dropdown renders as dropdown 1`] = `
+<React.Fragment>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="LeftSideNavItem"
+    onClick={[Function]}
+    to="/test-link"
+  >
+    <div
+      className="LeftSideNavItem__leftIcon"
+    >
+      <img
+        alt="icon"
+        src="test.svg"
+      />
+    </div>
+    <div
+      className="LeftSideNavItem__Nav-text"
+    >
+      Test link
+    </div>
+    <div
+      className="dropdownIcon dropdownIcon--inactive"
+      style={
+        Object {
+          "position": "absolute",
+          "right": "30px",
+          "top": "17px",
+        }
+      }
+    >
+      <img
+        alt="dropdown"
+        src="dropdown_inactive.svg"
+      />
+    </div>
+  </NavLink>
+  <div
+    className="LeftSideNavItem__dropdownContent inactive"
+  />
+</React.Fragment>
+`;
+
+exports[`<LeftSideNavItem /> renders the LeftSideNavItem 1`] = `
+<React.Fragment>
+  <NavLink
+    activeClassName="active"
+    aria-current="page"
+    className="LeftSideNavItem"
+    onClick={[Function]}
+    to="/test-link"
+  >
+    <div
+      className="LeftSideNavItem__leftIcon"
+    >
+      <img
+        alt="icon"
+        src="test.svg"
+      />
+    </div>
+    <div
+      className="LeftSideNavItem__Nav-text"
+    >
+      Test link
+    </div>
+    <div
+      className="dropdownIcon dropdownIcon--inactive"
+      style={
+        Object {
+          "position": "absolute",
+          "right": "30px",
+          "top": "17px",
+        }
+      }
+    >
+      <img
+        alt="dropdown"
+        src="dropdown_inactive.svg"
+      />
+    </div>
+  </NavLink>
+  <div
+    className="LeftSideNavItem__dropdownContent inactive"
+  />
+</React.Fragment>
+`;
