@@ -9,7 +9,9 @@
 # production
 /build
 
-/.env
+.env
+
+**/__snapshots__/
 
 # misc
 .DS_Store

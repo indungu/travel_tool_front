@@ -9,6 +9,7 @@ import videoSymbol from '../../images/video.svg';
 import fileSymbol from '../../images/file.svg';
 import './Login.scss';
 import TextLink from '../../components/text-link/TextLink';
+import { authenticationMessage } from '../../helper/toast';
 
 export class Login extends Component {
 
@@ -17,15 +18,16 @@ export class Login extends Component {
   }
 
   authenticated = () => {
-    const { isAuthenticated, history, verifyUser } = this.props;
+    const { isAuthenticated, history, setCurrentUser } = this.props;
     if(isAuthenticated){
      history.push('/request');
+     authenticationMessage();
     }
-    verifyUser();
+    setCurrentUser();
   }
 
   login = () => {
-    const url = `${process.env.ANDELA_AUTH_HOST}/login?redirect_url=${process.env.AUTH_REDIRECT_URL}`;
+    const url = `${process.env.REACT_APP_ANDELA_AUTH_HOST}/login?redirect_url=${process.env.REACT_APP_AUTH_REDIRECT_URL}`;
     window.location.replace(url);
   }
 
@@ -85,7 +87,7 @@ export class Login extends Component {
 Login.propTypes = {
   isAuthenticated: PropTypes.bool.isRequired,
   history: PropTypes.shape({}).isRequired,
-  verifyUser: PropTypes.func.isRequired,
+  setCurrentUser: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => {
@@ -94,10 +96,4 @@ const mapStateToProps = state => {
   };
 };
 
-export const mapDispatchToProps = dispatch => {
-  return {
-    verifyUser: () => { dispatch({ type: setCurrentUser() }); }
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, { setCurrentUser })(Login);

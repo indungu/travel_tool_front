@@ -1,10 +1,9 @@
 import React from 'react';
 import sinon from 'sinon';
-import { shallow } from 'enzyme';
-import { Login, mapDispatchToProps } from '../../Login/Login';
+import { Login } from '../Login';
 
 const props = {
-    verifyUser: () => {},
+    setCurrentUser: () => {},
     isAuthenticated: true,
     history: {
         push: jest.fn()
@@ -23,6 +22,5 @@ describe('Login Component', () => {
         sinon.spy(shallowWrapper.instance(), 'login');
         shallowWrapper.instance().login();
         expect(shallowWrapper.instance().login.calledOnce).toEqual(true);
-      });
-
+    });
 });

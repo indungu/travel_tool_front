@@ -1,0 +1,10 @@
+version: "2"
+eslint:
+  enabled: true
+exclude_patterns:
+- "**/node_modules/"
+- "**/test/"
+- "**/__tests__/"
+- "**/tests/"
+- "/config/"
+- "src/redux/store/__test__/"
