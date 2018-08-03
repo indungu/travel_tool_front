@@ -7,6 +7,7 @@ import fileSymbol from '../../images/file.svg';
 
 import './Login.scss';
 import TextLink from '../../components/text-link/TextLink';
+import Button from '../../components/buttons/Buttons';
 
 class Login extends Component {
   render() {
@@ -23,13 +24,13 @@ class Login extends Component {
               <p className="login-page__travel-request-text">
                   Travel Requests Made Easier
               </p>
-
-              <button type="button" className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored login-page__login-btn">
-                <img src={symbolG} alt="Google Symbol" className="login-page__google-white" />
+              <Button 
+                imageSrc={symbolG} altText="Google Symbol" imageClass="login-page__google-white" buttonType="button"
+                buttonClass="mdl-button mdl-js-button mdl-button--raised mdl-button--colored login-page__login-btn">
                 <span className="login-page__login-to-get-started-text">
-                 Login to Get Started
+                  {'Login to Get Started'}
                 </span>
-              </button>
+              </Button>
 
               {/* Add text link on the login page */}
 

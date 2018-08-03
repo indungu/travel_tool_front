@@ -83,6 +83,9 @@
         "mocha": true
       },
       "globals": {
-        "window": true
+        "window": true,
+        "shallow": true,
+        "mount": true,
+        "render": true
       }
 }

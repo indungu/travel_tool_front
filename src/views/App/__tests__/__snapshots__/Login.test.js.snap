@@ -25,6 +25,7 @@ exports[`should render Login page correctly 1`] = `
         </p>
         <button
           className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored login-page__login-btn"
+          id="demo-menu"
           type="button"
         >
           <img
@@ -32,11 +33,7 @@ exports[`should render Login page correctly 1`] = `
             className="login-page__google-white"
             src="Google-white.svg"
           />
-          <span
-            className="login-page__login-to-get-started-text"
-          >
-            Login to Get Started
-          </span>
+          Login to Get Started
         </button>
         <p
           className="login-page__how-to-book-a-trip-link"
